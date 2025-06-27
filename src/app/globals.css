@@ -2,8 +2,20 @@
 
 
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  :root {
+    --font-sans: 'Poppins', sans-serif;
+    /* --font-marcellus: 'Marcellus', serif; */
+    /* --font-cormorant: 'Cormorant Garamond', serif; */
+    /* --font-lora: 'Lora', serif; */
+    --font-cinzel: 'Cinzel', serif;
+  }
+
+  html {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-cinzel);
+  }
 }
