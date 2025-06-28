@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import { Marcellus, Poppins, Cormorant_Garamond, Lora, Cinzel } from "next/font/google";
+import Layout from "@/components/Layout";
+import { Marcellus, Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 
 const marcellus = Marcellus({ subsets: ["latin"], weight: ["400"], variable: "--font-marcellus" });
-const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-cormorant" });
-const lora = Lora({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-lora" });
-const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-cinzel" });
+
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-poppins",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
@@ -27,9 +32,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${marcellus.variable} ${cormorant.variable} ${lora.variable} ${cinzel.variable} ${poppins.variable} antialiased`}
+        className={`${marcellus.variable} ${poppins.variable} ${playfair.variable} antialiased`}
       >
-        {children}
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
