@@ -18,7 +18,7 @@
 @layer base {
   :root {
     /* Fonts */
-    --font-sans: 'Poppins', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
     --font-alex-brush: 'AlexBrush-Regular', serif;
     --font-balqis: 'Balqis', serif;
 
@@ -37,7 +37,7 @@
   }
 
   html {
-    font-family: var(--font-sans);
+    font-family: var(--font-poppins);
   }
 }
 
@@ -49,6 +49,9 @@
   }
   .font-balqis {
     font-family: var(--font-balqis);
+  }
+  .font-poppins {
+    font-family: var(--font-poppins);
   }
 
   /* Background Colors */
