@@ -8,9 +8,8 @@ import { FiMenu, FiShoppingBag, FiX } from "react-icons/fi";
 const NavbarMenu = [
 	{ id: 1, title: "Accueil", link: "/" },
 	{ id: 2, title: "Collections", link: "/collections" },
-	{ id: 3, title: "Philosophie", link: "/philosophie" },
-	{ id: 4, title: "Galerie", link: "/galerie" },
-	{ id: 5, title: "Journal", link: "/journal" },
+	{ id: 3, title: "A propos", link: "/a-propos" },
+	{ id: 4, title: "Contact", link: "/contact" },
 ];
 
 export default function Navbar() {
@@ -43,7 +42,7 @@ export default function Navbar() {
 	return (
 		<>
 			<header
-				className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
+				className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out bg-rose-light ${
 					isScrolled ? "bg-white shadow-sm" : "bg-transparent"
 				} ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
 			>
